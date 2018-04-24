@@ -40,7 +40,7 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: false
 
 footer:
   # Specify the date when the site was setup.
@@ -126,17 +126,22 @@ scheme: Pisces
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
+social:
+  GitHub: https://github.com/yesufan || github
+  E-Mail: mailto:yesufan@gmail.com || envelope
+  Google: https://plus.google.com/yesufan || google
+  Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  StackOverflow: https://stackoverflow.com/yesufan || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+  #微博: http://weibo.com/your-user-name
+  #豆瓣: http://douban.com/people/your-user-name
+  SegmentFault: https://segmentfault.com/ || meh-o
+  zhihu: http://www.zhihu.com/people/yesufan || quora
+  jianshu: https://www.jianshu.com/users/32fddbd5363b || heartbeat
 
 social_icons:
   enable: true
@@ -148,8 +153,14 @@ links_icon: link
 links_title: Links
 links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  Title: https://leancloud.cn/
+  优设: http://www.uisdc.com/
+  张鑫旭: http://www.zhangxinxu.com/
+  Web前端导航: http://www.alloyteam.com/nav/
+  前端书籍资料: http://www.36zhen.com/t?id=3448
+  百度前端技术学院: http://ife.baidu.com/
+  google前端开发基础: http://wf.uisdc.com/cn/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -174,7 +185,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-  position: left
+  position: right
   #position: right
 
   # Sidebar Display, available value (only for Muse | Mist):
@@ -182,9 +193,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
@@ -240,12 +251,19 @@ post_wordcount:
   #enabled: true
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
   #description: ex. subscribe to my blog by scanning my public wechat account
-
+# Wechat Subscriber
+wechat_subscriber:
+  enabled: true
+  qcode: /uploads/wechat-qcode.jpg
+  description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！
 # Reward
 #reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
-#alipay: /images/alipay.jpg
+wechatpay: /images/wechatpay.jpg
+alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+#wechatpay: /path/to/wechat-reward-image
+#alipay: /path/to/alipay-reward-image
 
 # Declare license on posts
 post_copyright:
@@ -277,7 +295,12 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+#highlight_theme: normal
+#highlight_theme: night
+#highlight_theme: night blue
+highlight_theme: night bright
+#highlight_theme: night eighties
+
 
 
 # ---------------------------------------------------------------
@@ -293,7 +316,7 @@ highlight_theme: normal
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -306,14 +329,15 @@ font:
   # Global font settings used on <body> element.
   global:
     external: true
-    family: Lato
+    #family: Lato
+    family: Monda
     size:
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
     size:
 
   # Font settings for posts.
@@ -326,13 +350,13 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
-    size:
+    family: Lobster
+    size: 24
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
     size:
 
 
@@ -353,15 +377,15 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: f1d93709581db02280ca1e7a8df8ff64
 
 # Duoshuo ShortName
 #duoshuo_shortname:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: sufan
   count: true
 
 # Hypercomments
@@ -420,7 +444,7 @@ gitment:
 # Warning: Baidu Share does not support https.
 #baidushare:
 ##  type: button
-
+baidushare: true
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
@@ -428,6 +452,7 @@ gitment:
 #jiathis:
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
+jiathis: true
 
 # Share
 #duoshuo_share: true
@@ -604,7 +629,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
@@ -695,10 +720,10 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # three_waves
-three_waves: false
+three_waves: true
 
 # canvas_lines
 canvas_lines: false
@@ -811,3 +836,8 @@ images: images
 
 # Theme version
 version: 5.1.4
+#设置动画效果
+use_motion: true
+#背景动画 canvas
+
+
